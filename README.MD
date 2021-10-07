@@ -12,8 +12,6 @@ Helpers to send API always in one JSON format:
 }
 ```
 
-## Install
-
 ## Installation
 
 Simply require the package via composer into your Laravel API.
