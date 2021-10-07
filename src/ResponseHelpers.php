@@ -1,6 +1,6 @@
 <?php
 
-namespace lazerg\ResponseHelpers;
+namespace lazerg\LaravelResponseHelpers;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\JsonResponse;
@@ -13,12 +13,12 @@ trait ResponseHelpers
      * Generate a structure for response
      *
      * @param string $message
-     * @param mixed|array $data
+     * @param mixed $data
      * @param int $statusCode
      *
      * @return JsonResponse
      */
-    protected function response(string $message, mixed $data = [], int $statusCode = 200): JsonResponse
+    protected function response(string $message, $data = [], int $statusCode = 200): JsonResponse
     {
         return Response::json([
             'message' => $message,
@@ -35,7 +35,7 @@ trait ResponseHelpers
      *
      * @return JsonResponse
      */
-    protected function responseData(mixed $data, int $statusCode = 200): JsonResponse
+    protected function responseData($data, int $statusCode = 200): JsonResponse
     {
         return $this->response('', $data, $statusCode);
     }
@@ -53,7 +53,15 @@ trait ResponseHelpers
         return $this->response($message, [], $statusCode);
     }
 
-    protected function responseResourceful(string $class, Collection|Model $data, int $status = 200): JsonResponse
+    /**
+     * Response resourcefully
+     *
+     * @param string $class
+     * @param Collection|Model $data
+     * @param int $status
+     * @return JsonResponse
+     */
+    protected function responseResourceful(string $class, $data, int $status = 200): JsonResponse
     {
         if ($data instanceof \Illuminate\Support\Collection) {
             return (call_user_func_array([$class, 'collection'], [$data]))
