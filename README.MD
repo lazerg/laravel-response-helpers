@@ -19,3 +19,9 @@ Simply require the package via composer into your Laravel API.
     composer require lazerg/laravel-response-helpers
 
 After that require the trait `\lazerg\LaravelResponseHelpers\ResponseHelpers` inside of your main controller `app/Http/Controllers/Controller.php`;
+
+## Testing
+
+1) `assertJsonData`
+2) `assertJsonStructureData`
+3) `assertJsonCountData`
