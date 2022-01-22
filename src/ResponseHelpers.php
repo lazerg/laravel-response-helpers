@@ -21,7 +21,7 @@ trait ResponseHelpers
      *
      * @return JsonResponse
      */
-    protected function response(string $message, $data = [], int $statusCode = 200): JsonResponse
+    protected function response(?string $message = '', $data = [], int $statusCode = 200): JsonResponse
     {
         return Response::json([
             'message' => $message,

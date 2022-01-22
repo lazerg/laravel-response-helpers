@@ -34,9 +34,11 @@ class LaravelResponseHelpersServiceProvider extends ServiceProvider
             return $this->assertJsonStructure(compact('data'));
         });
 
-        TestResponse::macro('assertJsonCountData', function (int $count): TestResponse {
+        TestResponse::macro('assertJsonCountData', function (int $count, ?string $key = null): TestResponse {
             /** @var TestResponse $this */
-            return $this->assertJsonCount($count, 'data');
+            $key = $key ? 'data.' . $key : 'data';
+
+            return $this->assertJsonCount($count, $key);
         });
     }
 }
