@@ -19,13 +19,13 @@
     },
     "autoload": {
         "psr-4": {
-            "lazerg\\LaravelResponseHelpers\\": "src/"
+            "Lazerg\\LaravelResponseHelpers\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "lazerg\\LaravelResponseHelpers\\LaravelResponseHelpersServiceProvider"
+                "Lazerg\\LaravelResponseHelpers\\LaravelResponseHelpersServiceProvider"
             ]
         }
     }
