@@ -1,6 +1,6 @@
 <?php
 
-namespace lazerg\LaravelResponseHelpers;
+namespace Lazerg\LaravelResponseHelpers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Testing\TestResponse;
