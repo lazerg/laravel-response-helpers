@@ -1,6 +1,6 @@
 <?php
 
-namespace lazerg\LaravelResponseHelpers;
+namespace Lazerg\LaravelResponseHelpers;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\JsonResponse;
