@@ -1,5 +1,11 @@
 # Laravel API Response Helpers
 
+![Version](https://img.shields.io/packagist/v/lazerg/laravel-response-helpers.svg?style=plastic)
+![Downloads count](https://img.shields.io/packagist/dm/lazerg/laravel-response-helpers?style=plastic)
+![Repository count](https://img.shields.io/github/repo-size/lazerg/laravel-response-helpers?style=plastic)
+![Last commit](https://img.shields.io/github/last-commit/lazerg/laravel-response-helpers?style=plastic)
+![Stars count](https://img.shields.io/packagist/stars/lazerg/laravel-response-helpers?style=plastic)
+
 Helpers to send API responses in same structured format. Response is always includes message and data.
 
 ```json
