@@ -24,6 +24,11 @@ class LaravelResponseHelpersServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        TestResponse::macro('assertJsonMessage', function (string $message): TestResponse {
+            /** @var TestResponse $this */
+            return $this->assertJson(compact('message'));
+        });
+
         TestResponse::macro('assertJsonData', function (array $data): TestResponse {
             /** @var TestResponse $this */
             return $this->assertJson(compact('data'));
