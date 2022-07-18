@@ -57,6 +57,17 @@ trait ResponseHelpers
     }
 
     /**
+     * Response with created status
+     *
+     * @param string $message
+     * @return JsonResponse
+     */
+    protected function responseCreatedMessage(string $message): JsonResponse
+    {
+        return $this->responseMessage($message, Response::HTTP_CREATED);
+    }
+
+    /**
      * @param string $class
      * @param Collection|AbstractPaginator|Model $data
      * @param string|null $message
