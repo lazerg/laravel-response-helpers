@@ -64,7 +64,7 @@ trait ResponseHelpers
      */
     protected function responseCreatedMessage(string $message): JsonResponse
     {
-        return $this->responseMessage($message, Response::HTTP_CREATED);
+        return $this->responseMessage($message, 201);
     }
 
     /**
