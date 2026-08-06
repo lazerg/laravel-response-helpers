@@ -8,7 +8,7 @@ use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Pagination\AbstractPaginator;
 use Illuminate\Support\Collection;
-use Response;
+use Illuminate\Support\Facades\Response;
 
 trait ResponseHelpers
 {
